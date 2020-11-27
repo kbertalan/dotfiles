@@ -5,6 +5,7 @@ Plug 'neovimhaskell/haskell-vim'
 Plug 'morhetz/gruvbox'
 Plug 'nbouscal/vim-stylish-haskell'
 Plug 'andys8/vim-elm-syntax', { 'for': ['elm'] }
+Plug 'michaeljsmith/vim-indent-object'
 
 call plug#end()
 
