@@ -11,7 +11,9 @@ PS1='[\u@\h \W]\$ '
 
 PATH=$HOME/.local/bin:$HOME/bin:$PATH
 
-eval "$(stack --bash-completion-script stack)"
+if which stack > /dev/null 2> /dev/null; then
+  eval "$(stack --bash-completion-script stack)"
+fi
 
 EDITOR=nvim
 
