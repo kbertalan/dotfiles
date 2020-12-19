@@ -9,7 +9,7 @@ alias ls='ls --color=auto'
 
 PS1='[\u@\h \W]\$ '
 
-PATH=$HOME/.local/bin:$HOME/bin:$PATH
+PATH=$HOME/.local/bin:$HOME/.cabal/bin:$HOME/.ghcup/bin:$HOME/bin:$PATH
 
 has() {
   which $1 > /dev/null 2> /dev/null
