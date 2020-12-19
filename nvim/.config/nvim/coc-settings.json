@@ -1,5 +1,5 @@
 {
-  "coc.preferences.formatOnSaveFiletypes": ["json", "elm"],
+  "coc.preferences.formatOnSaveFiletypes": ["json", "elm", "haskell"],
   "languageserver": {
     "haskell": {
       "command": "haskell-language-server-wrapper",
@@ -15,7 +15,7 @@
       "initializationOptions": {
         "languageServerHaskell": {
           "hlintOn": true,
-          "formattingProvider": "stylis-haskell"
+          "formattingProvider": "stylish-haskell"
         }
       }
     },
