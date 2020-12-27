@@ -3,7 +3,6 @@ call plug#begin()
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neovimhaskell/haskell-vim'
 Plug 'morhetz/gruvbox'
-Plug 'nbouscal/vim-stylish-haskell'
 Plug 'andys8/vim-elm-syntax', { 'for': ['elm'] }
 Plug 'michaeljsmith/vim-indent-object'
 Plug 'airblade/vim-gitgutter'
