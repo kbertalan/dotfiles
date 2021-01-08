@@ -1,7 +1,3 @@
-has() {
-  which $1 > /dev/null 2> /dev/null
-}
-
 if has ghcup; then
   PATH=$HOME/.ghcup/bin:$PATH
 fi
