@@ -10,6 +10,9 @@ alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 
 PATH=$HOME/bin:$PATH
+EDITOR=nvim
+alias vim=nvim
+alias vi=nvim
 
 has() {
   which $1 > /dev/null 2> /dev/null
