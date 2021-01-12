@@ -26,3 +26,6 @@ disabled = true
 [java]
 style = "green"
 
+[aws]
+symbol = "aws: "
+
