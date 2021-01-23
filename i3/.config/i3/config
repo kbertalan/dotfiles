@@ -228,3 +228,9 @@ mode "$mode_system" {
 
 bindsym $mod+Shift+e mode "$mode_system"
 
+# auto layout
+# cargo install --git https://github.com/chmln/i3-auto-layout
+exec_always --no-startup-id $HOME/.cargo/bin/i3-auto-layout
+
+assign [class="Vimb"] workspace $ws2
+
