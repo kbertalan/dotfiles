@@ -234,3 +234,6 @@ exec_always --no-startup-id $HOME/.cargo/bin/i3-auto-layout
 
 assign [class="Vimb"] workspace $ws2
 
+bindsym $mod+i exec firefox
+assign [class="firefox"] workspace $ws2
+
