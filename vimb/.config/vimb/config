@@ -1,0 +1,2 @@
+set editor-command=alacritty -e nvim %s
+
