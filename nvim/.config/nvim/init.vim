@@ -6,6 +6,7 @@ Plug 'morhetz/gruvbox'
 Plug 'andys8/vim-elm-syntax', { 'for': ['elm'] }
 Plug 'michaeljsmith/vim-indent-object'
 Plug 'airblade/vim-gitgutter'
+Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 
 call plug#end()
 
