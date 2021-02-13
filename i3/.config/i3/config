@@ -247,3 +247,6 @@ exec firefox
 assign [class="Google-chrome" instance="gmail.com"] workspace $ws9
 exec google-chrome-stable --app=https://gmail.com
 
+bindsym XF86MonBrightnessUp exec "light -A 5; notify-send \\"brightness up: $(light)\\""
+bindsym XF86MonBrightnessDown exec "light -U 5; notify-send \\"brightness down: $(light)\\""
+
