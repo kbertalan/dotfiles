@@ -27,7 +27,7 @@
       "initializationOptions": {
         "languageServerHaskell": {
           "hlintOn": true,
-          "formattingProvider": "stylish-haskell"
+          "formattingProvider": "ormolu"
         }
       }
     },
