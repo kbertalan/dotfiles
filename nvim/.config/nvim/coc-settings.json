@@ -3,7 +3,8 @@
     "json",
     "elm",
     "haskell",
-    "rust"
+    "rust",
+    "terraform"
   ],
   "languageserver": {
     "haskell": {
@@ -39,6 +40,18 @@
       "rootPatterns": [
         "elm.json"
       ]
+    },
+    "terraform": {
+      "command": "terraform-ls",
+      "args": [
+        "serve"
+      ],
+      "filetypes": [
+        "terraform",
+        "tf"
+      ],
+      "initializationOptions": {},
+      "settings": {}
     }
   },
   "rust.clippy_preference": "on"
