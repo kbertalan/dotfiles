@@ -8,6 +8,7 @@ Plug 'michaeljsmith/vim-indent-object'
 Plug 'airblade/vim-gitgutter'
 Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 Plug 'edwinb/idris2-vim'
+Plug 'hashivim/vim-terraform'
 
 call plug#end()
 
@@ -211,3 +212,9 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
 nnoremap <leader>F :call CocAction('format')<CR>
 
+" terraform plugin
+let g:terraform_fmt_on_save=1
+
+" idris2 file type, only if 'edwinb/idris2-vim' plugin is not installed
+" au BufNewFile,BufRead *.idr setf idris2
+" au BufNewFile,BufRead *.lidr setf lidris2
