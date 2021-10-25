@@ -52,18 +52,6 @@
       ],
       "initializationOptions": {},
       "settings": {}
-    },
-    "idris2": {
-      "command": "idris2-lsp",
-      "rootPatterns": [
-        ".ipkg"
-      ],
-      "filetypes": [
-        "idris2",
-        "lidris2",
-        "idr",
-        "lidr"
-      ]
     }
   },
   "rust.clippy_preference": "on"
