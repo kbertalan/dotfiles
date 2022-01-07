@@ -29,3 +29,8 @@ style = "green"
 [aws]
 symbol = "aws: "
 
+[env_var]
+variable = "GUIX_ENVIRONMENT"
+format = "[guix>]($style) "
+style = "green dimmed"
+
