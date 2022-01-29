@@ -1,5 +1,5 @@
 if has guix; then
-  GUIX_PROFILE="$HOME/.guix-profile"
+  export GUIX_PROFILE="$HOME/.guix-profile"
   . "$GUIX_PROFILE/etc/profile"
 fi
 
