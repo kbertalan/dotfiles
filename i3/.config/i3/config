@@ -250,3 +250,5 @@ assign [class="Google-chrome" instance="gmail.com"] workspace $ws9
 bindsym XF86MonBrightnessUp exec "light -A 5; notify-send \\"brightness up: $(light)\\""
 bindsym XF86MonBrightnessDown exec "light -U 5; notify-send \\"brightness down: $(light)\\""
 
+exec_always --no-startup-id "setxkbmap -layout us,hu -option grp:shifts_toggle && xmodmap $HOME/.Xmodmap"
+
