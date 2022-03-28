@@ -43,6 +43,7 @@ set $left h
 set $right l
 
 set $mod Mod4
+set $alt Mod1
 
 # use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -214,7 +215,7 @@ bindsym $mod+m bar mode toggle
 default_border pixel 1
 
 # exit, suspend, shutdown
-set $Locker i3lock && sleep 1
+set $Locker i3lock -c 000000 && sleep 1
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
@@ -229,6 +230,8 @@ mode "$mode_system" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
+
+bindsym Control+$alt+Delete exec --no-startup-id $Locker
 
 bindsym $mod+Shift+e mode "$mode_system"
 
