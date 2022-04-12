@@ -216,6 +216,7 @@ bindsym $mod+m bar mode toggle
 # exec i3-config-wizard
 
 default_border pixel 1
+hide_edge_borders smart
 
 # exit, suspend, shutdown
 set $Locker i3lock -c 000000 && sleep 1
