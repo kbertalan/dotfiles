@@ -35,6 +35,7 @@ battery all {
         status_bat = ""
         status_chr = ""
         status_full = ""
+        last_full_capacity = true
 }
 
 disk "/" {
