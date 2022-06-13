@@ -249,7 +249,7 @@ bindsym $mod+i exec firefox
 assign [class="firefox"] workspace $ws2
 
 exec $TERMINAL
-exec firefox
+# exec firefox
 
 assign [class="Google-chrome" instance="gmail.com"] workspace $ws9
 # exec google-chrome-stable --app=https://gmail.com
