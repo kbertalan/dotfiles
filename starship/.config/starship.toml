@@ -34,3 +34,9 @@ variable = "GUIX_ENVIRONMENT"
 format = "[guix>]($style) "
 style = "green dimmed"
 
+[kubernetes]
+disabled = false
+
+[kubernetes.context_aliases]
+"arn:aws:.*:cluster/(?P<var_cluster>[\\w-]+)" = "aws-$var_cluster"
+
