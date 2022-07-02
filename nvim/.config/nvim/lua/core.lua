@@ -1,39 +1,4 @@
-call plug#begin()
-
-Plug 'morhetz/gruvbox'
-Plug 'michaeljsmith/vim-indent-object'
-Plug 'neovim/nvim-lspconfig'
-" Plug 'glepnir/lspsaga.nvim'
-Plug 'MunifTanjim/nui.nvim'
-Plug 'ShinKage/idris2-nvim'
-Plug 'airblade/vim-gitgutter'
-
-" auto completion
-Plug 'hrsh7th/cmp-nvim-lsp'
-Plug 'hrsh7th/cmp-buffer'
-Plug 'hrsh7th/cmp-path'
-Plug 'hrsh7th/cmp-cmdline'
-Plug 'hrsh7th/cmp-nvim-lua'
-Plug 'hrsh7th/nvim-cmp'
-Plug 'onsails/lspkind-nvim'
-
-" cmp vsnip
-Plug 'hrsh7th/cmp-vsnip'
-Plug 'hrsh7th/vim-vsnip'
-
-" fonts
-Plug 'kyazdani42/nvim-web-devicons'
-
-" status line
-Plug 'nvim-lualine/lualine.nvim'
-
-" telescope
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
-
-Plug 'numToStr/Comment.nvim'
-call plug#end()
-
+vim.cmd [[
 let mapleader = " "
 
 " map esc key to jk keys to speed up exiting from insert mode 
@@ -89,18 +54,4 @@ set tabstop=2
 set softtabstop=2
 set expandtab
 set signcolumn=yes
-
-lua <<EOF
-require('settings/lsp')
--- require('settings/lsp-saga')
-require('settings/cmp')
-require('settings/devicons')
-require('settings/lualine')
-require('settings/telescope')
-require('settings/comment')
-
-require('lang/haskell')
-require('lang/idris2')
-require('lang/go')
-EOF
-
+]]
