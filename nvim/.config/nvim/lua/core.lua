@@ -1,57 +1,60 @@
-vim.cmd [[
-let mapleader = " "
+-- set file encodings to utf-8 by default
+vim.opt.encoding = 'utf-8'
 
-" map esc key to jk keys to speed up exiting from insert mode 
-inoremap jk <Esc>
+-- enable highlighting search results
+vim.opt.hls = true
+-- enable relative and normal line numbering
+vim.opt.relativenumber = true
 
-" enable file type based settings
-filetype plugin indent on
+-- keep some lines visible when scrolling
+vim.opt.scrolloff = 3
 
-" set file encodings to utf-8 by default
-set encoding=utf-8
+vim.opt.modeline = true
+vim.opt.modelines = 3
 
-" disable cursor keys in insert mode
-inoremap <Left> <NOP>
-inoremap <Right> <NOP>
-inoremap <Up> <NOP>
-inoremap <Down> <NOP>
+vim.opt.listchars = 'eol:¬,tab:▸ ,trail:·'
+vim.opt.list = true
 
-" disable cursor keys in normal mode
-nnoremap <Left> <NOP>
-nnoremap <Right> <NOP>
-nnoremap <Up> <NOP>
-nnoremap <Down> <NOP>
+vim.opt.shiftwidth = 2
+vim.opt.tabstop = 2
+vim.opt.softtabstop = 2
+vim.opt.expandtab = true
+vim.opt.signcolumn = 'yes'
 
-" map :W to :w
-command W w
+----------
+-- KEYS --
+----------
 
-" enable highlighting search results
-set hls
-" enable relative and normal line numbering
-set number relativenumber
+vim.g.mapleader = " "
 
-" colorsheme
-" set termguicolors
-colorscheme gruvbox 
-syntax on
-set background=dark
+local keymap=vim.api.nvim_set_keymap
 
-" shortcuts to open and reload vim config
-nnoremap <Leader>ce :e $MYVIMRC<CR>
-nnoremap <Leader>cr :source $MYVIMRC<CR>
+-- map esc key to jk keys to speed up exiting from insert mode 
+keymap('i', 'jk', '<Esc>', { noremap = true })
 
-" keep some lines visible when scrolling
-set scrolloff=3
+-- disable cursor keys in insert mode
+keymap('i', '<Left>', '<NOP>', { noremap = true })
+keymap('i', '<Right>', '<NOP>', { noremap = true })
+keymap('i', '<Up>', '<NOP>', { noremap = true })
+keymap('i', '<Down>', '<NOP>', { noremap = true })
 
-set modeline
-set modelines=3
+-- disable cursor keys in normal mode
+keymap('n', '<Left>', '<NOP>', { noremap = true })
+keymap('n', '<Right>', '<NOP>', { noremap = true })
+keymap('n', '<Up>', '<NOP>', { noremap = true })
+keymap('n', '<Down>', '<NOP>', { noremap = true })
 
-set listchars=eol:¬,tab:▸\ ,trail:·
-set list
+-- shortcuts to open and reload vim config
+keymap('n', '<Leader>ce :e', '$MYVIMRC<CR>', { noremap = true })
+keymap('n', '<Leader>cr :source', '$MYVIMRC<CR>', { noremap = true })
 
-set shiftwidth=2
-set tabstop=2
-set softtabstop=2
-set expandtab
-set signcolumn=yes
-]]
+-- map :W to :w
+vim.api.nvim_create_user_command('W', 'w', { nargs = 1 })
+
+------------
+-- COLORS --
+------------
+
+vim.cmd [[colorscheme gruvbox]]
+vim.g.syntax = 'on'
+vim.opt.background = 'dark'
