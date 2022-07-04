@@ -1,4 +1,7 @@
 local nvim_lsp = require('lspconfig')
+local ls = require('luasnip')
+
+require("luasnip.loaders.from_vscode").load({ include = { "go" } })
 
 nvim_lsp['gopls'].setup {
   on_attach = require('settings/lsp').on_attach,

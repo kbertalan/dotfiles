@@ -18,9 +18,10 @@ Plug 'hrsh7th/cmp-nvim-lua'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'onsails/lspkind-nvim'
 
-" cmp vsnip
-Plug 'hrsh7th/cmp-vsnip'
-Plug 'hrsh7th/vim-vsnip'
+" cmp luasnip
+Plug 'L3MON4D3/LuaSnip'
+Plug 'saadparwaiz1/cmp_luasnip'
+Plug 'rafamadriz/friendly-snippets'
 
 " fonts
 Plug 'kyazdani42/nvim-web-devicons'

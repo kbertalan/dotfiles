@@ -12,4 +12,5 @@ require('settings/comment')
 require('lang/haskell')
 require('lang/idris2')
 require('lang/go')
+require('lang/lua')
 
