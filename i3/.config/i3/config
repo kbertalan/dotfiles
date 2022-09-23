@@ -216,6 +216,7 @@ bindsym $mod+m bar mode toggle
 # exec i3-config-wizard
 
 default_border pixel 1
+for_window [all] border pixel 1
 hide_edge_borders smart
 
 # exit, suspend, shutdown
