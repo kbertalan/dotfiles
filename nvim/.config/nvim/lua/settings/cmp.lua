@@ -68,6 +68,6 @@ cmp.setup.cmdline(':', {
 })
 
 -- Share capabilities with other modules
-cmp_module.capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+cmp_module.capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 return cmp_module
