@@ -15,6 +15,7 @@ general {
 order += "wireless _first_"
 order += "ethernet _first_"
 order += "path_exists PPP-VPN"
+order += "path_exists TUN-VPN"
 order += "battery all"
 order += "disk /"
 order += "load"
@@ -23,8 +24,7 @@ order += "tztime local"
 
 wireless _first_ {
         format_up = " (%quality at %essid)"
-#        format_down = " down"
-        format_down = ""
+        format_down = " "
 }
 
 ethernet _first_ {
@@ -34,15 +34,21 @@ ethernet _first_ {
 
 path_exists PPP-VPN {
         path = "/proc/sys/net/ipv4/conf/ppp0"
-        format = "%title"
+        format = " %title"
+        format_down = ""
+}
+
+path_exists TUN-VPN {
+        path = "/proc/sys/net/ipv4/conf/tun0"
+        format = " %title"
         format_down = ""
 }
 
 battery all {
         format = "%status %percentage %remaining"
-        status_bat = ""
-        status_chr = ""
-        status_full = ""
+        status_bat = " "
+        status_chr = " "
+        status_full = " "
         last_full_capacity = true
 }
 
@@ -51,14 +57,14 @@ disk "/" {
 }
 
 load {
-        format = " %1min"
+        format = "%1min/min %5min/5min"
 }
 
 memory {
-        format = " %used / %total"
+        format = "%used / %total"
         threshold_degraded = "10%"
         threshold_critical = "5%"
-        format_degraded = "  %used / %total"
+        format_degraded = "%used / %total"
 }
 
 tztime local {
