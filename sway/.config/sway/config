@@ -36,6 +36,7 @@ bindsym $mod+Return exec $terminal
 bindsym $mod+Shift+q kill
 
 bindsym $mod+d exec --no-startup-id "wofi --show drun -i -p run"
+bindsym $mod+c exec --no-startup-id "wofi --show run -i"
 bindsym $mod+n exec --no-startup-id "networkmanager_dmenu"
 exec --no-startup-id nm-applet --indicator
 
