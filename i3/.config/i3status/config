@@ -45,7 +45,7 @@ path_exists TUN-VPN {
 }
 
 battery all {
-        format = "%status %percentage %remaining"
+        format = "%status %percentage %remaining %consumption"
         status_bat = " "
         status_chr = " "
         status_full = " "
