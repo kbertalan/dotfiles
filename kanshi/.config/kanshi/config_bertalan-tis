@@ -1,0 +1,13 @@
+profile single {
+  output eDP-1 enable
+}
+
+profile desk {
+  output eDP-1 mode 1920x1080 position 0,1080
+  output "Hewlett Packard HP E222 6CM5500HGQ" mode 1920x1080 position 0,0
+}
+
+profile room3 {
+  output eDP-1 mode 1920x1080 position 0,1080
+  output "Hewlett Packard HP E222 6CM5500HGQ" mode 1920x1080 position 0,0
+}

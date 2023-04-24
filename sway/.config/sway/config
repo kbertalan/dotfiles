@@ -98,7 +98,15 @@ bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
 
 # move workspace between monitors
-bindsym $mod+x move workspace to output next
+bindsym $mod+Ctrl+$left move workspace to left
+bindsym $mod+Ctrl+$down move workspace to down
+bindsym $mod+Ctrl+$up move workspace to up
+bindsym $mod+Ctrl+$right move workspace to right
+
+bindsym $mod+Ctrl+Left move workspace to left
+bindsym $mod+Ctrl+Down move workspace to down
+bindsym $mod+Ctrl+Up move workspace to up
+bindsym $mod+Ctrl+Right move workspace to right
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -234,3 +242,5 @@ gaps outer 3
 smart_gaps on
 
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+exec ln -sf ~/.config/kanshi/config_$(hostname) ~/.config/kanshi/config && kanshi
+
