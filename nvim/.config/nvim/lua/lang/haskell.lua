@@ -13,7 +13,7 @@ nvim_lsp['hls'].setup {
 
 -- Auto-format haskel files prior to saving them
 vim.cmd([[
-autocmd BufWritePre *.hs lua vim.lsp.buf.formatting_sync(nil, 1000)
-autocmd BufWritePre *.lhs lua vim.lsp.buf.formatting_sync(nil, 1000)
+autocmd BufWritePre *.hs lua vim.lsp.buf.format({ async = false })
+autocmd BufWritePre *.lhs lua vim.lsp.buf.format({ async = false })
 ]])
 

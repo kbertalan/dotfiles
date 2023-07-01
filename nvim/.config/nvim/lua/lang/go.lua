@@ -11,8 +11,7 @@ nvim_lsp['gopls'].setup {
   capabilities = require('settings/cmp').capabilities
 }
 
--- Auto-format haskel files prior to saving them
 vim.cmd([[
-autocmd BufWritePre *.go lua vim.lsp.buf.formatting_sync(nil, 1000)
+autocmd BufWritePre *.go lua vim.lsp.buf.format({ async = false })
 ]])
 
